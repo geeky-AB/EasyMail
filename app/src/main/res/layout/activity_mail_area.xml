@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/background">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingStart="5dp"
+            android:paddingTop="5dp">
+            <soup.neumorphism.NeumorphCardView
+                style="@style/Widget.Neumorph.CardView"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:padding="1dp"
+                app:neumorph_shapeType="flat"
+                app:neumorph_shadowColorLight="@color/background">
+
+                <EditText
+                    android:id="@+id/emailEt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="15dp"
+                    android:hint="Email"
+                    android:inputType="textEmailAddress"
+                    android:background="@color/white"
+                    android:layout_marginLeft="10dp"/>
+
+            </soup.neumorphism.NeumorphCardView>
+
+            <soup.neumorphism.NeumorphCardView
+                style="@style/Widget.Neumorph.CardView"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:padding="1dp"
+                app:neumorph_shadowColorLight="@color/background">
+
+                <EditText
+                    android:id="@+id/subjectEt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="15dp"
+                    android:hint="Subject"
+                    android:inputType="text"
+                    android:background="@color/white"
+                    android:layout_marginLeft="10dp"/>
+
+            </soup.neumorphism.NeumorphCardView>
+
+            <soup.neumorphism.NeumorphCardView
+                style="@style/Widget.Neumorph.CardView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:padding="1dp"
+                app:neumorph_shadowColorLight="@color/background">
+
+                <EditText
+                    android:id="@+id/contentEt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="15dp"
+                    android:hint="Content"
+                    android:gravity="top"
+                    android:inputType="textMultiLine"
+                    android:background="@color/white"
+                    android:layout_marginLeft="10dp"/>
+
+            </soup.neumorphism.NeumorphCardView>
+
+            <soup.neumorphism.NeumorphButton
+                android:id="@+id/sendBtn"
+                android:layout_width="150dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                app:neumorph_backgroundColor="@color/white"
+                android:text="Send"
+                android:gravity="center"
+                style="@style/Widget.Neumorph.Button"
+                app:neumorph_shadowColorLight="@color/background"
+                android:layout_marginBottom="5dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="6"
+            android:orientation="vertical"
+            android:paddingRight="3dp">
+            <soup.neumorphism.NeumorphImageView
+                android:id="@+id/emailSpk"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:src="@drawable/ic_baseline_mic_24"
+                app:neumorph_shadowColorLight="@color/background"
+                app:neumorph_shadowColorDark="@color/background"
+                app:neumorph_backgroundColor="@color/background"
+                android:paddingTop="2dp"/>
+
+            <soup.neumorphism.NeumorphImageView
+                android:id="@+id/subjectSpk"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:src="@drawable/ic_baseline_mic_24"
+                app:neumorph_shadowColorLight="@color/background"
+                app:neumorph_shadowColorDark="@color/background"
+                app:neumorph_backgroundColor="@color/background"
+                android:paddingBottom="14dp"/>
+
+            <soup.neumorphism.NeumorphImageView
+                android:id="@+id/contentSpk"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/ic_baseline_mic_24"
+                app:neumorph_shadowColorLight="@color/background"
+                app:neumorph_shadowColorDark="@color/background"
+                app:neumorph_backgroundColor="@color/background"
+                android:paddingBottom="60dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
